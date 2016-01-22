@@ -35,8 +35,19 @@ public class Person {
 	public boolean isHasGoldenGlobe() {
 		return hasGoldenGlobe;
 	}
-		public void setHasGoldenGlobe(boolean hasGoldenGlobe) {
+	public void setHasGoldenGlobe(boolean hasGoldenGlobe) {
 		this.hasGoldenGlobe = hasGoldenGlobe;
 	}
+	public String toXMLString() {
+		return "<person>"
+			  + "<firstName>" + this.firstName +  "</firstName>"
+			  + "<lastName>" + this.lastName +  "</lastName>"	
+			  + "<gender>" + this.gender +  "</gender>"	
+			  + "<hasOscar>" + this.hasOscar +  "</hasOscar>"	
+			  + "<hasGoldenGlobe>" + this.hasGoldenGlobe +  "</hasGoldenGlobe>"	
+			  + "</person>";
+		
+			
+	}	
 	
 }
