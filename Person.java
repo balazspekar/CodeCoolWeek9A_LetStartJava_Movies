@@ -39,14 +39,11 @@ public class Person {
 		this.hasGoldenGlobe = hasGoldenGlobe;
 	}
 	public String toXMLString() {
-		return "<person>" +
-				Tools.toXMLTag("firstName", this.firstName) +
-				Tools.toXMLTag("lastName", this.lastName) +
-				Tools.toXMLTag("gender", String.valueOf(this.gender)) +
-				Tools.toXMLTag("hasOscar", String.valueOf(this.hasOscar)) +
-				Tools.toXMLTag("hasGoldenGlobe", String.valueOf(this.hasGoldenGlobe)) +
-				"</person>";
-		
+		return Tools.toXMLTag("person", Tools.toXMLTag("firstName", this.firstName) +
+										 Tools.toXMLTag("lastName", this.lastName) +
+										 Tools.toXMLTag("gender", String.valueOf(this.gender)) +
+										 Tools.toXMLTag("hasOscar", String.valueOf(this.hasOscar)) +
+										 Tools.toXMLTag("hasGoldenGlobe", String.valueOf(this.hasGoldenGlobe)) );
 	}	
 	
 }
