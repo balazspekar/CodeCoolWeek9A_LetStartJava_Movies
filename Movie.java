@@ -1,6 +1,5 @@
 package CodeCoolWeek9A_LetStartJava_Movies;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Movie {
 
@@ -8,7 +7,7 @@ public class Movie {
 	Genre genre;
 	long duration;
 	double rate;
-	List<Person> cast = new ArrayList<Person>();
+	ArrayList<Person> cast = new ArrayList<Person>();
 	
 	public String getTitle() {
 		return title;
@@ -34,14 +33,24 @@ public class Movie {
 	public void setRate(double rate) {
 		this.rate = rate;
 	}
-	public List<Person> getCast() {
+	public ArrayList<Person> getCast() {
 		return cast;
 	}
 	public void setCast(ArrayList<Person> cast) {	
 		this.cast = cast;
 	}
 	public String toXMLString() {
-		return "";
+		
+		
+		return "<movie>"
+			  + "<title>" + this.title +  "</title>"
+		   	  + "<genre>" + this.genre +  "</genre>"	
+	      	  + "<duration>" + this.duration +  "</duration>"	
+			  + "<rate>" + this.rate +  "</rate>"	
+			  + "<cast>"
+
+			  + "</cast>"	
+			  + "</movie>";
 	}
 	
 	

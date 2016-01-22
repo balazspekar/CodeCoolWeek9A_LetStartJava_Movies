@@ -102,7 +102,11 @@ public class MovieManager {
 		movie5.setCast(persons5);
 		
 		// generating XML like string for Person
-		System.out.println(person1.toXMLString());
+		// System.out.println(person1.toXMLString());
+		
+		// generating XML like string for Movie
+		System.out.println(movie1.toXMLString());
+		
 	}
 
 	

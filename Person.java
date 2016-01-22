@@ -46,8 +46,6 @@ public class Person {
 			  + "<hasOscar>" + this.hasOscar +  "</hasOscar>"	
 			  + "<hasGoldenGlobe>" + this.hasGoldenGlobe +  "</hasGoldenGlobe>"	
 			  + "</person>";
-		
-			
 	}	
 	
 }
