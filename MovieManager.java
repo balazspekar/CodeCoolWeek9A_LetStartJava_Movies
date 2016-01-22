@@ -5,21 +5,21 @@ import java.util.ArrayList;
 public class MovieManager {
 	public static void main(String[] args) {
 		
-		// instantiating persons
+		// instantiating Person objects
 		Person person1 = new Person();
 		Person person2 = new Person();
 		Person person3 = new Person();
 		Person person4 = new Person();
 		Person person5 = new Person();
 		
-		// instantiating movies
+		// instantiating Movie objects
 		Movie movie1 = new Movie();
 		Movie movie2 = new Movie();
 		Movie movie3 = new Movie();
 		Movie movie4 = new Movie();
 		Movie movie5 = new Movie();
 		
-		// filling up Person type objects with data
+		// filling up Person objects with data
 		person1.setFirstName("Arnold");
 		person1.setLastName("Schwarzenegger");
 		person1.setGender(Gender.MALE);
@@ -50,7 +50,7 @@ public class MovieManager {
 		person5.setHasGoldenGlobe(false);
 		person5.setHasOscar(false);
 		
-		// filling up Movies type objects with data
+		// filling up Movie objects with data
 		movie1.setTitle("The Intouchables");
 		movie1.setGenre(Genre.COMEDY);
 		movie1.setDuration(112);
@@ -101,13 +101,21 @@ public class MovieManager {
 		persons4.add(person5);
 		movie5.setCast(persons5);
 		
-		// generating XML like string for Person
+		// generating XML like string for Person, uncomment to see it in action
 		// System.out.println(person3.toXMLString());
 		
-		// generating XML like string for Movie
+		// generating XML like string for Movie, uncomment to see it in action
 		// System.out.println(movie1.toXMLString());
 		
+		// testing Tools' class getMovieTitles() method
+		ArrayList<Movie> movies = new ArrayList<Movie>();
+		movies.add(movie1);
+		movies.add(movie2);
+		movies.add(movie3);
+		
+		System.out.println(Tools.getMovieTitles(movies)[0]);
+		System.out.println(Tools.getMovieTitles(movies)[1]);
+		System.out.println(Tools.getMovieTitles(movies)[2]);
 	}
-
 	
 }
