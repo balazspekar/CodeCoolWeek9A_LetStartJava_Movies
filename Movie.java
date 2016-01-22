@@ -40,18 +40,16 @@ public class Movie {
 		this.cast = cast;
 	}
 	public String toXMLString() {
-		
-		
-		return "<movie>"
-			  + "<title>" + this.title +  "</title>"
-		   	  + "<genre>" + this.genre +  "</genre>"	
-	      	  + "<duration>" + this.duration +  "</duration>"	
-			  + "<rate>" + this.rate +  "</rate>"	
-			  + "<cast>"
-
-			  + "</cast>"	
-			  + "</movie>";
+		return "<movie>" +
+				Tools.toXMLTag("title", this.title) +
+				Tools.toXMLTag("genre", String.valueOf(this.genre)) +
+				Tools.toXMLTag("duration", String.valueOf(this.duration)) + 
+				Tools.toXMLTag("rate", String.valueOf(this.rate)) +
+				
+				for (Person person : this.cast) {
+					Tools.toXMLTag("person", person.toXMLString())
+				} +
+				
+				"</movie>";
 	}
-	
-	
 }

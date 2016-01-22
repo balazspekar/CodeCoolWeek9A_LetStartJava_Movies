@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Tools {
 	
-	public static String toXMLTag(String bemenet1, String bemenet2) {
-		return "";
+	public static String toXMLTag(String tagname, String value) {
+		return "<" + tagname + ">" + value + "</" + tagname + ">";
 	}
 	
 	public static HashMap<Person, Integer> countMoviesPerPerson(List<Movie> movies) {
